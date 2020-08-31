@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+<!--
+        <item
+
+            android:id="@+id/menu"
+            android:icon="@drawable/mi_perfil"
+            android:title="Menu"></item>-->
+        <item
+            android:id="@+id/facturas"
+            android:icon="@drawable/mi_perfil"
+            android:title="Facturas"></item>
+        <item
+            android:id="@+id/cotizaciones"
+            android:icon="@drawable/mi_perfil"
+            android:title="Cotizaciones"></item>
+        <item
+            android:id="@+id/contratos"
+            android:icon="@drawable/mi_perfil"
+            android:title="Contratos"></item>
+    </group>
+
+    <item android:title="Conexion">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/finalizar"
+                    android:icon="@drawable/log_out"
+                    android:title="Desconectarse"></item>
+            </group>
+
+        </menu>
+
+    </item>
+
+
+    <item android:title="Contacto">
+
+        <menu>
+            <item
+                android:id="@+id/contactus"
+                android:icon="@drawable/ic_email_black_24dp"
+                android:title="soporte@innovafactoring.com"></item>
+        </menu>
+
+    </item>
+
+</menu>

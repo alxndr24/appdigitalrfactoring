@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:background="#fffafa"
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp" >
+
+
+        <TextView
+            android:id="@+id/cliente1"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/estado1"
+            android:layout_alignBaseline="@+id/estado1"
+            android:maxLines="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="TECMAN G y R S.R.L"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            ></TextView>
+
+        <TextView
+
+            android:id="@+id/estado1"
+            android:textAlignment="center"
+            android:padding="6sp"
+            android:background="@drawable/bg_estado"
+            android:textSize="12sp"
+            android:layout_toLeftOf="@+id/arrowBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desembolsado"
+            android:textColor="@color/facebook_color"
+            android:textStyle="bold"
+            ></TextView>
+
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/arrowBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+            ></Button>
+
+
+        <RelativeLayout
+            android:id="@+id/expandableView"
+            android:background="#eee9e9"
+            android:paddingBottom="12dp"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/cliente1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDocumento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Moneda"></TextView>
+
+            <TextView
+                android:id="@+id/moneda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:text="Soles"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/tvSerie"
+                android:layout_below="@+id/tvDocumento"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="% Adelanto"></TextView>
+            <TextView
+                android:id="@+id/adelanto"
+                android:layout_below="@+id/moneda"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%85"></TextView>
+
+
+            <TextView
+                android:id="@+id/tvNumero"
+                android:layout_below="@+id/tvSerie"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="% Tasa"></TextView>
+
+            <TextView
+                android:id="@+id/tasa"
+                android:layout_below="@+id/adelanto"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%2.55"></TextView>
+
+
+            <TextView
+
+                android:id="@+id/tvFecha"
+                android:layout_below="@+id/tvNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Fecha desembolso"></TextView>
+
+            <TextView
+                android:id="@+id/fechadesembolso"
+                android:padding="5dp"
+                android:layout_below="@+id/tasa"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/03/19"></TextView>
+
+            <TextView
+                android:id="@+id/tvFechaPago"
+                android:padding="5dp"
+                android:layout_below="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha vigencia"></TextView>
+
+            <TextView
+                android:id="@+id/fechavigencia"
+                android:layout_below="@+id/fechadesembolso"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26/04/19"></TextView>
+
+            <TextView
+                android:id="@+id/tvMoneda"
+                android:padding="5dp"
+                android:layout_below="@+id/tvFechaPago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desembolso total"></TextView>
+            <TextView
+                android:id="@+id/desembolsototal"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/fechavigencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15,245.56"></TextView>
+
+            <TextView
+                android:id="@+id/tvPrecioVenta"
+                android:padding="5dp"
+                android:layout_below="@+id/tvMoneda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remanente total"></TextView>
+
+            <TextView
+                android:id="@+id/remanentetotal"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_below="@+id/desembolsototal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2,813.05"></TextView>
+
+
+            <TextView
+                android:id="@+id/tvMonto"
+                android:layout_below="@+id/tvPrecioVenta"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tvFecha"
+                android:text="Interes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:id="@+id/interes"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/remanentetotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="629.22"></TextView>
+
+            <TextView
+                android:id="@+id/tvPdf"
+                android:layout_below="@+id/tvMonto"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tvFecha"
+                android:text="PDF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <Button
+                android:id="@+id/btnVerPdf"
+                android:layout_below="@+id/interes"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="#ff8c00"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver"></Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+

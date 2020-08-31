@@ -1,0 +1,69 @@
+row sirve para factura
+debo crear otro objeto para cada uno y un adaptador nuevo
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MenuActivity">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+menu
+
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/finalizar"
+        android:title="Salir"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/facturas"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Facturas"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/cotizaciones"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Cotizaciones"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/contratos"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Contratos"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+
+
+</menu>
+
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu1"
+        android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
+
+
+
+        863EOgvVNFYgvVzwEWyvsi6qqX11GNtJN3Mf7kwt

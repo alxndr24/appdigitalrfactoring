@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Digital Factoring</string>
+    <string name="facturas">Facturas</string>
+    <string name="cotizaciones">Cotizaciones</string>
+    <string name="contratos">Contratos</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="menu"><font fgcolor='#000000'>Menu</font></string>
+    <string name="login_username_hint">Usuario</string>
+    <string name="login_password_hint">Contrasena</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="login_forgot_password">Olvide mi contrasena</string>
+    <string name="facebook_login">Log In con Facebook</string>
+    <string name="login_sign_up">¿No tienes una cuenta? Regístrate</string>
+    <string name="navigation_drawer_open">Abrir barra de navegacion</string>
+    <string name="navigation_drawer_close">Cerrar barra de navegacion</string>
+</resources>

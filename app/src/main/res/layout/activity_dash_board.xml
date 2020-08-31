@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoardActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    >
+    <com.google.android.material.navigation.NavigationView
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:menu="@menu/main_menu1"
+        android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/ic_menu_black_24dp"
+            android:tint="@android:color/black"
+            ></androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            app:layout_constraintBottom_toTopOf="@+id/chart1"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/relativeSoles"
+                android:padding="5sp"
+                android:layout_marginStart="40sp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/bg_dashboard_resumenes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvRegistrosSoles"
+                    android:textSize="15sp"
+                    android:text="x Registros"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+                <TextView
+                    android:id="@+id/tvCantSoles"
+                    android:textColor="#000"
+                    android:layout_below="@id/tvRegistrosSoles"
+                    android:text="S/. 456,231.62"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:padding="5sp"
+                android:layout_marginEnd="40sp"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:background="@drawable/bg_dashboard_resumenes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvRegistrosDolares"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:text="x Registros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+                <TextView
+                    android:id="@+id/tvCantDolares"
+                    android:textColor="#000"
+                    android:layout_below="@id/tvRegistrosDolares"
+                    android:text="USD 456.00"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
